@@ -84,7 +84,11 @@ export default function Home() {
 
           <FlowCard
             title="Decision: choose path"
-            bullets={["Low Balance Close-Out", "Maintain Pool", "Consumer Investments / IAP"]}
+            bullets={[
+              "Low Balance Close-Out",
+              "Maintain Pool",
+              "Consumer Investments / IAP",
+            ]}
             tone="decision"
           />
 
@@ -115,7 +119,10 @@ export default function Home() {
             <div className="flex w-full flex-col items-center">
               <FlowCard
                 title="Consumer Investments / IAP"
-                bullets={["Letter of Authorization (eSign)", "Transfer to appropriate solution"]}
+                bullets={[
+                  "Letter of Authorization (eSign)",
+                  "Transfer to appropriate solution",
+                ]}
               />
               <DownArrow />
               <FlowCard title="Follow up email" tone="action" />
@@ -135,6 +142,47 @@ export default function Home() {
               tone="action"
             />
           </div>
+
+          {/* Placeholder sections */}
+          <section className="mt-16 w-full max-w-xl">
+            <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-zinc-500">
+                Templates
+              </div>
+              <div className="mt-2 text-base font-semibold">Email templates</div>
+              <p className="mt-2 text-sm leading-6 text-zinc-700">
+                (Placeholder) Add copy-paste templates for follow-up emails,
+                realignment outreach, and close-out confirmations.
+              </p>
+            </div>
+          </section>
+
+          <section className="mt-6 w-full max-w-xl">
+            <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-zinc-500">
+                Links
+              </div>
+              <div className="mt-2 text-base font-semibold">Quick links</div>
+              <p className="mt-2 text-sm leading-6 text-zinc-700">
+                (Placeholder) Add links to Salesforce views, OMT form, Finder,
+                and internal documentation.
+              </p>
+            </div>
+          </section>
+
+          <section className="mt-6 w-full max-w-xl">
+            <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-zinc-500">
+                FAQ
+              </div>
+              <div className="mt-2 text-base font-semibold">Common questions</div>
+              <p className="mt-2 text-sm leading-6 text-zinc-700">
+                (Placeholder) Add FAQs like: when to close-out vs maintain pool,
+                what counts as “final outcome”, and how many outbounds before
+                assigning CEA.
+              </p>
+            </div>
+          </section>
         </div>
       </main>
 
