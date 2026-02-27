@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { SiteHeader } from "@/components/site-header";
+
 type FlowCardProps = {
   title: string;
   bullets?: string[];
@@ -87,20 +89,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <header className="border-b border-slate-200 bg-[#0b1f3a] text-white">
-        <div className="mx-auto flex w-full max-w-3xl flex-col gap-2 px-5 py-10">
-          <div className="text-xs font-semibold uppercase tracking-[0.22em] text-white/65">
-            CEA Process Guide
-          </div>
-          <h1 className="text-3xl font-semibold tracking-tight text-white">
-            Account Distribution
-          </h1>
-          <p className="max-w-2xl text-sm leading-6 text-white/75">
-            Baseline flowchart for the home page. Scroll down to follow the
-            process end-to-end.
-          </p>
-        </div>
-      </header>
+      <SiteHeader
+        title="Account Distribution"
+        subtitle="Baseline flowchart for the home page. Scroll down to follow the process end-to-end."
+      />
 
       <main className="mx-auto w-full max-w-3xl px-5 py-12">
         <div className="flex flex-col items-center">
@@ -276,46 +268,14 @@ export default function Home() {
             />
           </div>
 
-          {/* Placeholder sections */}
-          <section className="mt-16 w-full max-w-xl">
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
-                Templates
-              </div>
-              <div className="mt-2 text-base font-semibold">Email templates</div>
-              <p className="mt-2 text-sm leading-6 text-slate-700">
-                (Placeholder) Add copy-paste templates for follow-up emails,
-                realignment outreach, and close-out confirmations.
-              </p>
+          <div className="mt-16 w-full max-w-xl rounded-3xl border border-slate-200 bg-white p-6 text-sm text-slate-700 shadow-sm">
+            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
+              Resources
             </div>
-          </section>
-
-          <section className="mt-6 w-full max-w-xl">
-            <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-zinc-500">
-                Links
-              </div>
-              <div className="mt-2 text-base font-semibold">Quick links</div>
-              <p className="mt-2 text-sm leading-6 text-zinc-700">
-                (Placeholder) Add links to Salesforce views, OMT form, Finder,
-                and internal documentation.
-              </p>
-            </div>
-          </section>
-
-          <section className="mt-6 w-full max-w-xl">
-            <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-zinc-500">
-                FAQ
-              </div>
-              <div className="mt-2 text-base font-semibold">Common questions</div>
-              <p className="mt-2 text-sm leading-6 text-zinc-700">
-                (Placeholder) Add FAQs like: when to close-out vs maintain pool,
-                what counts as “final outcome”, and how many outbounds before
-                assigning CEA.
-              </p>
-            </div>
-          </section>
+            <p className="mt-2">
+              See <a className="font-semibold text-[#0aa6a6] underline" href="/templates">Templates</a>, <a className="font-semibold text-[#0aa6a6] underline" href="/links">Links</a>, and <a className="font-semibold text-[#0aa6a6] underline" href="/faq">FAQ</a> for additional guidance.
+            </p>
+          </div>
         </div>
       </main>
 
