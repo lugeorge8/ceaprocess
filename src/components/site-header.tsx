@@ -32,8 +32,8 @@ export function SiteHeader({
           <Link href="/templates" className={linkCls}>
             Templates
           </Link>
-          <Link href="/links" className={linkCls}>
-            Links
+          <Link href="/resources" className={linkCls}>
+            Resources
           </Link>
           <Link href="/faq" className={linkCls}>
             FAQ

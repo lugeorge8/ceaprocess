@@ -273,7 +273,7 @@ export default function Home() {
               Resources
             </div>
             <p className="mt-2">
-              See <a className="font-semibold text-[#0aa6a6] underline" href="/templates">Templates</a>, <a className="font-semibold text-[#0aa6a6] underline" href="/links">Links</a>, and <a className="font-semibold text-[#0aa6a6] underline" href="/faq">FAQ</a> for additional guidance.
+              See <a className="font-semibold text-[#0aa6a6] underline" href="/templates">Templates</a>, <a className="font-semibold text-[#0aa6a6] underline" href="/resources">Resources</a>, and <a className="font-semibold text-[#0aa6a6] underline" href="/faq">FAQ</a> for additional guidance.
             </p>
           </div>
         </div>
