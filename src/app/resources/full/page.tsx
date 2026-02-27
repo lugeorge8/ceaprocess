@@ -43,7 +43,7 @@ export default function ResourcesFullPage() {
             <h2>OMT Escalation Form</h2>
             <p>(No link provided in doc.)</p>
 
-            <h2>HSA Guidelines</h2>
+            <h2 id="hsa-guidelines">HSA Guidelines</h2>
             <p>
               <strong>Note:</strong> Merrill Lynch no longer offers Health Savings
               Accounts (HSA). Clients have the option to open a Bank of America
