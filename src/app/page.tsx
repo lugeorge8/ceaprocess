@@ -43,8 +43,15 @@ function DownArrow() {
   );
 }
 
-function ToggleDetails({ steps }: { steps: string[] }) {
+function ToggleDetails({
+  steps,
+  label = "details",
+}: {
+  steps: string[];
+  label?: string;
+}) {
   const [open, setOpen] = useState(false);
+  const headerLabel = label.charAt(0).toUpperCase() + label.slice(1);
   return (
     <div className="w-full">
       <button
@@ -53,14 +60,14 @@ function ToggleDetails({ steps }: { steps: string[] }) {
         className="inline-flex items-center gap-2 rounded-2xl border border-slate-300/70 bg-white/65 px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm hover:bg-white"
         aria-expanded={open}
       >
-        {open ? "Hide details" : "Show details"}
+        {open ? `Hide ${label}` : `Show ${label}`}
         <span className="text-slate-400">▾</span>
       </button>
 
       {open ? (
         <div className="mt-3 rounded-3xl border border-slate-300/60 bg-white/70 p-5 text-sm leading-6 text-slate-700 shadow-sm">
           <div className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
-            Steps
+            {headerLabel}
           </div>
           <ol className="mt-3 list-decimal space-y-1 pl-5">
             {steps.map((s) => (
@@ -74,6 +81,10 @@ function ToggleDetails({ steps }: { steps: string[] }) {
 }
 
 export default function Home() {
+  const [path, setPath] = useState<
+    "low-balance" | "maintain-pool" | "ci-iap" | null
+  >(null);
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <header className="border-b border-slate-200 bg-[#0b1f3a] text-white">
@@ -101,6 +112,7 @@ export default function Home() {
                 </div>
 
                 <ToggleDetails
+                  label="steps"
                   steps={[
                     "Open PMAC in CEW",
                     "Find the Resources tab and open CART (Client Account Redistribution Tool)",
@@ -119,11 +131,27 @@ export default function Home() {
           <FlowCard title="Split accounts in team" tone="action" />
           <DownArrow />
 
-          <FlowCard
-            title="Assign Action Plan CAP to accounts"
-            bullets={["Can assign all at once", "Only click save once"]}
-            tone="action"
-          />
+          <div className="w-full max-w-xl rounded-3xl border border-[#0aa6a6]/35 bg-[#e6f7f7] p-6 shadow-sm">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <div className="text-base font-semibold tracking-tight text-slate-900">
+                  Assign Action Plan CAP to accounts
+                </div>
+                <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-700">
+                  <li>Can assign all at once</li>
+                  <li>Only click save once</li>
+                </ul>
+              </div>
+              <ToggleDetails
+                label="best practices"
+                steps={[
+                  "To assign all at once: sort the list of people you need to assign alphabetically in Excel",
+                  "Scroll through the All Clients page on Salesforce and select each person",
+                  "Click Create Action Plans (top right)",
+                ]}
+              />
+            </div>
+          </div>
           <DownArrow />
 
           <FlowCard
@@ -136,19 +164,66 @@ export default function Home() {
           />
           <DownArrow />
 
-          <FlowCard
-            title="Decision: choose path"
-            bullets={[
-              "Low Balance Close-Out",
-              "Maintain Pool",
-              "Consumer Investments / IAP",
-            ]}
-            tone="decision"
-          />
+          <div className="w-full max-w-xl rounded-3xl border border-amber-300/40 bg-amber-50 p-6 shadow-sm">
+            <div className="text-base font-semibold tracking-tight text-slate-900">
+              Decision: choose path
+            </div>
+            <p className="mt-2 text-sm leading-6 text-slate-700">
+              Click one option to reveal the next steps.
+            </p>
 
-          {/* Branches stacked vertically (scroll-down) */}
-          <div className="mt-10 flex w-full flex-col items-center gap-10">
-            <div className="flex w-full flex-col items-center">
+            <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-3">
+              <button
+                type="button"
+                onClick={() => setPath("low-balance")}
+                className={`rounded-2xl border px-4 py-2 text-sm font-semibold transition ${
+                  path === "low-balance"
+                    ? "border-amber-400 bg-white"
+                    : "border-amber-300/60 bg-white/60 hover:bg-white"
+                }`}
+              >
+                Low Balance Close-Out
+              </button>
+              <button
+                type="button"
+                onClick={() => setPath("maintain-pool")}
+                className={`rounded-2xl border px-4 py-2 text-sm font-semibold transition ${
+                  path === "maintain-pool"
+                    ? "border-amber-400 bg-white"
+                    : "border-amber-300/60 bg-white/60 hover:bg-white"
+                }`}
+              >
+                Maintain Pool
+              </button>
+              <button
+                type="button"
+                onClick={() => setPath("ci-iap")}
+                className={`rounded-2xl border px-4 py-2 text-sm font-semibold transition ${
+                  path === "ci-iap"
+                    ? "border-amber-400 bg-white"
+                    : "border-amber-300/60 bg-white/60 hover:bg-white"
+                }`}
+              >
+                Consumer Investments / IAP
+              </button>
+            </div>
+
+            {path ? (
+              <button
+                type="button"
+                onClick={() => setPath(null)}
+                className="mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-600 hover:text-slate-800"
+              >
+                Clear selection
+              </button>
+            ) : null}
+          </div>
+
+          {path ? <DownArrow /> : null}
+
+          {/* Revealed branch */}
+          {path === "low-balance" ? (
+            <div className="mt-2 flex w-full flex-col items-center">
               <FlowCard
                 title="Low Balance Close-Out"
                 bullets={["Submit form to OMT", "Final outcome update"]}
@@ -156,8 +231,10 @@ export default function Home() {
               <DownArrow />
               <FlowCard title="Follow up email" tone="action" />
             </div>
+          ) : null}
 
-            <div className="flex w-full flex-col items-center">
+          {path === "maintain-pool" ? (
+            <div className="mt-2 flex w-full flex-col items-center">
               <FlowCard
                 title="Maintain Pool"
                 bullets={[
@@ -169,8 +246,10 @@ export default function Home() {
               <DownArrow />
               <FlowCard title="Follow up email" tone="action" />
             </div>
+          ) : null}
 
-            <div className="flex w-full flex-col items-center">
+          {path === "ci-iap" ? (
+            <div className="mt-2 flex w-full flex-col items-center">
               <FlowCard
                 title="Consumer Investments / IAP"
                 bullets={[
@@ -181,7 +260,7 @@ export default function Home() {
               <DownArrow />
               <FlowCard title="Follow up email" tone="action" />
             </div>
-          </div>
+          ) : null}
 
           <div className="mt-12 flex w-full max-w-xl flex-col items-center">
             <DownArrow />
