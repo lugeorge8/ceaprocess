@@ -215,42 +215,48 @@ export default function Home() {
 
           {/* Revealed branch */}
           {path === "low-balance" ? (
-            <div className="mt-2 flex w-full flex-col items-center">
-              <FlowCard
-                title="Low Balance Close-Out"
-                bullets={["Submit form to OMT", "Final outcome update"]}
-              />
-              <DownArrow />
-              <FlowCard title="Follow up email" tone="action" />
+            <div className="mt-2 w-full max-w-xl rounded-3xl border border-amber-300/70 bg-amber-50/60 p-3 shadow-sm">
+              <div className="flex flex-col items-center">
+                <FlowCard
+                  title="Low Balance Close-Out"
+                  bullets={["Submit form to OMT", "Final outcome update"]}
+                />
+                <DownArrow />
+                <FlowCard title="Follow up email" tone="action" />
+              </div>
             </div>
           ) : null}
 
           {path === "maintain-pool" ? (
-            <div className="mt-2 flex w-full flex-col items-center">
-              <FlowCard
-                title="Maintain Pool"
-                bullets={[
-                  "Outreach to client to inform account realignment",
-                  "Document calls on Salesforce",
-                  "Follow-up email on realignment",
-                ]}
-              />
-              <DownArrow />
-              <FlowCard title="Follow up email" tone="action" />
+            <div className="mt-2 w-full max-w-xl rounded-3xl border border-amber-300/70 bg-amber-50/60 p-3 shadow-sm">
+              <div className="flex flex-col items-center">
+                <FlowCard
+                  title="Maintain Pool"
+                  bullets={[
+                    "Outreach to client to inform account realignment",
+                    "Document calls on Salesforce",
+                    "Follow-up email on realignment",
+                  ]}
+                />
+                <DownArrow />
+                <FlowCard title="Follow up email" tone="action" />
+              </div>
             </div>
           ) : null}
 
           {path === "ci-iap" ? (
-            <div className="mt-2 flex w-full flex-col items-center">
-              <FlowCard
-                title="Consumer Investments / IAP"
-                bullets={[
-                  "Letter of Authorization (eSign)",
-                  "Transfer to appropriate solution",
-                ]}
-              />
-              <DownArrow />
-              <FlowCard title="Follow up email" tone="action" />
+            <div className="mt-2 w-full max-w-xl rounded-3xl border border-amber-300/70 bg-amber-50/60 p-3 shadow-sm">
+              <div className="flex flex-col items-center">
+                <FlowCard
+                  title="Consumer Investments / IAP"
+                  bullets={[
+                    "Letter of Authorization (eSign)",
+                    "Transfer to appropriate solution",
+                  ]}
+                />
+                <DownArrow />
+                <FlowCard title="Follow up email" tone="action" />
+              </div>
             </div>
           ) : null}
 

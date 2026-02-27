@@ -24,3 +24,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Consistent hover/transition for clickables */
+a,
+button {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease,
+    opacity 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+a:hover {
+  opacity: 0.92;
+}
+
+button:hover {
+  transform: translateY(-0.5px);
+}
+
+button:active {
+  transform: translateY(0px);
+}
