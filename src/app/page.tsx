@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 type FlowCardProps = {
   title: string;
   bullets?: string[];
@@ -39,6 +43,36 @@ function DownArrow() {
   );
 }
 
+function ToggleDetails({ steps }: { steps: string[] }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="w-full max-w-xl">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="inline-flex items-center gap-2 rounded-2xl border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-50"
+        aria-expanded={open}
+      >
+        {open ? "Hide details" : "Show details"}
+        <span className="text-zinc-400">▾</span>
+      </button>
+
+      {open ? (
+        <div className="mt-3 rounded-3xl border border-zinc-200 bg-white p-5 text-sm leading-6 text-zinc-700 shadow-sm">
+          <div className="text-xs font-semibold uppercase tracking-[0.22em] text-zinc-500">
+            Steps
+          </div>
+          <ol className="mt-3 list-decimal space-y-1 pl-5">
+            {steps.map((s) => (
+              <li key={s}>{s}</li>
+            ))}
+          </ol>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900">
@@ -59,7 +93,21 @@ export default function Home() {
 
       <main className="mx-auto w-full max-w-3xl px-5 py-12">
         <div className="flex flex-col items-center">
-          <FlowCard title="Save Excel list" tone="action" />
+          <div className="flex w-full flex-col items-center gap-4 lg:max-w-none lg:flex-row lg:items-start lg:justify-center">
+            <FlowCard title="Save Your List" tone="action" />
+            <div className="lg:w-[420px] lg:pt-1">
+              <ToggleDetails
+                steps={[
+                  "Open PMAC in CEW",
+                  "Find the Resources tab and open CART (Client Account Redistribution Tool)",
+                  "Find the Domain ID that was assigned the accounts in the top left. If none show up under your FA ID, go to Finder → Domain and ensure new Producer IDs are selected",
+                  "Go to Distribution Detail",
+                  "Set the start/end period to ensure you download the appropriate distributions",
+                  "On the right side of the page, click the green X page to download the current table as an excel sheet",
+                ]}
+              />
+            </div>
+          </div>
           <DownArrow />
 
           <FlowCard title="Split accounts in team" tone="action" />
