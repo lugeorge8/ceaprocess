@@ -100,7 +100,7 @@ export default function Home() {
             <div className="w-full max-w-xl rounded-3xl border border-[#0aa6a6]/35 bg-[#e6f7f7] p-6 shadow-sm">
               <div className="flex items-start justify-between gap-4">
                 <div className="text-base font-semibold tracking-tight text-slate-900">
-                  Save Your List
+                  1. Save Your List
                 </div>
 
                 <ToggleDetails
@@ -120,14 +120,14 @@ export default function Home() {
           </div>
           <DownArrow />
 
-          <FlowCard title="Split accounts in team" tone="action" />
+          <FlowCard title="2. Split accounts in team" tone="action" />
           <DownArrow />
 
           <div className="w-full max-w-xl rounded-3xl border border-[#0aa6a6]/35 bg-[#e6f7f7] p-6 shadow-sm">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <div className="text-base font-semibold tracking-tight text-slate-900">
-                  Assign Action Plan CAP to accounts
+                  3. Assign Action Plan CAP to accounts
                 </div>
                 <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-6 text-slate-700">
                   <li>Can assign all at once</li>
@@ -147,7 +147,7 @@ export default function Home() {
           <DownArrow />
 
           <FlowCard
-            title="Prep outreach"
+            title="4. Prep outreach"
             bullets={[
               "Check Finder to view holdings",
               "Check New Holdings View to see annuities / PE / hedge funds / alts",
@@ -158,7 +158,7 @@ export default function Home() {
 
           <div className="w-full max-w-xl rounded-3xl border border-amber-300/40 bg-amber-50 p-6 shadow-sm">
             <div className="text-base font-semibold tracking-tight text-slate-900">
-              Decision: choose path
+              5. Decision: choose path
             </div>
             <p className="mt-2 text-sm leading-6 text-slate-700">
               Click one option to reveal the next steps.
@@ -218,11 +218,22 @@ export default function Home() {
             <div className="mt-2 w-full max-w-xl rounded-3xl border border-amber-300/70 bg-amber-50/60 p-3 shadow-sm">
               <div className="flex flex-col items-center">
                 <FlowCard
-                  title="Low Balance Close-Out"
-                  bullets={["Submit form to OMT", "Final outcome update"]}
+                  title="6. Low Balance Close-Out"
+                  bullets={[
+                    "Submit form to OMT",
+                    "Final outcome update",
+                    "Use OMT escalation form if needed (see link below)",
+                  ]}
                 />
-                <DownArrow />
-                <FlowCard title="Follow up email" tone="action" />
+                <div className="mt-4 w-full max-w-xl rounded-3xl border border-slate-200 bg-white p-5 text-sm text-slate-700 shadow-sm">
+                  <div className="font-semibold text-slate-900">OMT escalation form</div>
+                  <a
+                    href="/resources/omt-escalation"
+                    className="mt-2 inline-flex text-sm font-semibold text-[#0aa6a6] underline"
+                  >
+                    Open OMT escalation form →
+                  </a>
+                </div>
               </div>
             </div>
           ) : null}
@@ -231,15 +242,13 @@ export default function Home() {
             <div className="mt-2 w-full max-w-xl rounded-3xl border border-amber-300/70 bg-amber-50/60 p-3 shadow-sm">
               <div className="flex flex-col items-center">
                 <FlowCard
-                  title="Maintain Pool"
+                  title="6. Maintain Pool"
                   bullets={[
                     "Outreach to client to inform account realignment",
                     "Document calls on Salesforce",
                     "Follow-up email on realignment",
                   ]}
                 />
-                <DownArrow />
-                <FlowCard title="Follow up email" tone="action" />
               </div>
             </div>
           ) : null}
@@ -248,14 +257,12 @@ export default function Home() {
             <div className="mt-2 w-full max-w-xl rounded-3xl border border-amber-300/70 bg-amber-50/60 p-3 shadow-sm">
               <div className="flex flex-col items-center">
                 <FlowCard
-                  title="Consumer Investments / IAP"
+                  title="6. Consumer Investments / IAP"
                   bullets={[
                     "Letter of Authorization (eSign)",
                     "Transfer to appropriate solution",
                   ]}
                 />
-                <DownArrow />
-                <FlowCard title="Follow up email" tone="action" />
               </div>
             </div>
           ) : null}
@@ -263,13 +270,13 @@ export default function Home() {
           <div className="mt-12 flex w-full max-w-xl flex-col items-center">
             <DownArrow />
             <FlowCard
-              title="Per outbound attempt"
+              title="6. Per outbound attempt"
               bullets={["Update Action Plan item(s)", "Log call in Salesforce notes"]}
               tone="action"
             />
             <DownArrow />
             <FlowCard
-              title="Assign CEA (3–8 outbounds) if no final outcome by 2nd outreach"
+              title="7. Assign CEA (3–8 outbounds) if no final outcome by 2nd outreach"
               tone="action"
             />
           </div>
