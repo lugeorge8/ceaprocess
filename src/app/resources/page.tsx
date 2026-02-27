@@ -93,14 +93,9 @@ export default function ResourcesPage() {
                   "Salesforce: New Task → assign to Kaitlyn Stern → Title: LexusNexxus (use if phone number doesn't work).",
               },
               {
-                label: "HSA Guidelines (relevant summary)",
-                note:
-                  "Merrill no longer offers HSAs. Clients can open a BofA Health Benefit Solutions HSA. Annual limits: $4,400 single / $8,750 family (+$1,000 if 55+). Fees: $50 annual custodial, $50 closeout/transfer out. Transfers out require liquidation to cash; in-kind not supported.",
-              },
-              {
-                label: "Full HSA reference",
-                href: "/resources/full#hsa-guidelines",
-                note: "Full text and phone numbers.",
+                label: "HSA Guidelines",
+                href: "/resources/hsa",
+                note: "Limits, fees, transfers, and BofA HSA setup instructions.",
               },
             ]}
           />
