@@ -99,7 +99,7 @@ export default function Home() {
           <div className="flex w-full flex-col items-center gap-4 lg:max-w-none lg:flex-row lg:items-start lg:justify-center">
             <div className="w-full max-w-xl rounded-3xl border border-[#0aa6a6]/35 bg-[#e6f7f7] p-6 shadow-sm">
               <div className="flex items-start justify-between gap-4">
-                <div className="text-base font-semibold tracking-tight text-slate-900">
+                <div className="flex-1 text-center text-base font-semibold tracking-tight text-slate-900">
                   1. Save Your List
                 </div>
 
