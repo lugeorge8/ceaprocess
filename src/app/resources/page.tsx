@@ -77,6 +77,10 @@ export default function ResourcesPage() {
                 href: "http://resourcecentral.bankofamerica.com/RetirementEducationPlanningDocuments/0873.pdf",
               },
               {
+                label: "FINRA CE & MyLearning Tracking.xlsx",
+                href: "https://bankofamerica.sharepoint.com.mcas.ms/:x:/r/sites/MG-PacificCoastCEAs-CO/_layouts/15/Doc.aspx?sourcedoc=%7B8BDDDCA5-A629-4CE8-A0E5-D1E53DFDFF74%7D&file=FINRA%20CE%20&%20MyLearning%20Tracking.xlsx=&action=default&mobileredirect=true",
+              },
+              {
                 label: "Street Request.pdf (when order quantity < minimum)",
                 href: "http://intranet.bankofamerica.com/GWMSContactCenter/Documents/99%20Markets/Street%20Request.pdf",
               },
