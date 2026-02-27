@@ -53,14 +53,8 @@ export default function ResourcesPage() {
             Quick links
           </div>
           <p className="mt-2 text-sm leading-6 text-slate-700">
-            Source: uploaded doc. If you want these links regrouped by step
-            (Save Your List, CAP assignment, outreach, etc.), tell me.
+            
           </p>
-
-          <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-slate-800">
-            <span className="font-semibold">Note:</span> “Salesforce New Task → assign to Kaitlyn Stern…” is used
-            if the phone number doesn’t work.
-          </div>
 
           <LinkList
             items={[
@@ -94,8 +88,9 @@ export default function ResourcesPage() {
                 note: "Reference table page.",
               },
               {
-                label: "Salesforce: New Task → assign to Kaitlyn Stern",
-                note: "Title: LexusNexxus for nonworking numbers",
+                label: "Nonworking Number",
+                note:
+                  "Salesforce: New Task → assign to Kaitlyn Stern → Title: LexusNexxus (use if phone number doesn't work).",
               },
               {
                 label: "HSA Guidelines (relevant summary)",
