@@ -174,7 +174,7 @@ export default function Home() {
                     : "border-amber-300/60 bg-white/60 hover:bg-white"
                 }`}
               >
-                Low Balance Close-Out
+5a. Low Balance Close-Out
               </button>
               <button
                 type="button"
@@ -185,7 +185,7 @@ export default function Home() {
                     : "border-amber-300/60 bg-white/60 hover:bg-white"
                 }`}
               >
-                Maintain Pool
+5b. Maintain Pool
               </button>
               <button
                 type="button"
@@ -196,7 +196,7 @@ export default function Home() {
                     : "border-amber-300/60 bg-white/60 hover:bg-white"
                 }`}
               >
-                Consumer Investments / IAP
+5c. Consumer Investments / IAP
               </button>
             </div>
 
@@ -249,6 +249,19 @@ export default function Home() {
                     "Follow-up email on realignment",
                   ]}
                 />
+
+                <div className="mt-4 w-full max-w-xl rounded-3xl border border-slate-200 bg-white p-5 text-sm text-slate-700 shadow-sm">
+                  <div className="font-semibold text-slate-900">Managing special cases</div>
+                  <p className="mt-2 text-sm leading-6 text-slate-700">
+                    Use this when you see alternative investments (annuities, PE, hedge funds, alts) or other exceptions.
+                  </p>
+                  <a
+                    href="/managing-special-cases"
+                    className="mt-2 inline-flex text-sm font-semibold text-[#0aa6a6] underline"
+                  >
+                    Open managing special cases →
+                  </a>
+                </div>
               </div>
             </div>
           ) : null}
