@@ -1,0 +1,227 @@
+CEAPROCESS — CONSOLIDATED IMPORTANT INFO
+Generated: 2026-03-10 (UTC)
+Source: /home/ubuntu/clawd/tmp/ceaprocess (Next.js)
+
+============================================================
+1) LANDING PAGE ( / )
+============================================================
+Title: CEA Process
+Subtitle: Neatly organized hub for the Account Distribution workflow, templates, and reference links.
+
+Start here:
+- Account Distribution
+- CTA: /process
+
+Main sections:
+- Process → /process
+- Templates → /templates
+- Resources → /resources
+- FAQ → /faq
+
+Notes:
+- Primary workflow lives on the Process page.
+- Keep templates/resources/FAQ small and easy to scan.
+- If something changes, update the site the same day.
+
+============================================================
+2) PRIMARY WORKFLOW ( /process ) — Account Distribution
+============================================================
+Step 1. Save Your List (toggle: “Show steps”)
+- Open PMAC in CEW
+- Find the Resources tab and open CART (Client Account Redistribution Tool)
+- Find the Domain ID that was assigned the accounts in the top left. If none show up under your FA ID, go to Finder → Domain and ensure new Producer IDs are selected
+- Go to Distribution Detail
+- Set the start/end period to ensure you download the appropriate distributions
+- On the right side of the page, click the green X page to download the current table as an excel sheet
+
+Step 2. Split accounts in team
+
+Step 3. Assign Action Plan CAP to accounts
+- Can assign all at once
+- Only click save once
+Best practices (toggle):
+- To assign all at once: sort the list of people you need to assign alphabetically in Excel
+- Scroll through the All Clients page on Salesforce and select each person
+- Click Create Action Plans (top right)
+
+Step 4. Prep outreach
+- Check Finder to view holdings
+- Check New Holdings View to see annuities / PE / hedge funds / alts
+- Determine if Low-Bal Close-Out, Maintain Pool, or CI/IAP
+
+Step 5. Decision: choose path
+Buttons:
+- 5a. Low Balance Close-Out
+- 5b. Maintain Pool
+- 5c. Consumer Investments / IAP
+
+Branch 5a → Step 6. Low Balance Close-Out
+- Submit form to OMT
+- Request OMT for automatic approval (<$15)
+- Final outcome update
+- Use OMT escalation form if needed
+Link: /resources/omt-escalation
+
+Branch 5b → Step 6. Maintain Pool
+- Outreach to client to inform account realignment
+- Document calls on Salesforce
+- Follow-up email on realignment
+Special cases (alts/exceptions):
+- Use when you see alternative investments (annuities, PE, hedge funds, alts) or other exceptions.
+Link: /managing-special-cases
+
+Branch 5c → Step 6. Consumer Investments / IAP
+- Letter of Authorization (eSign)
+- Transfer to appropriate solution
+
+Per outbound attempt — Step 6
+- Update Action Plan item(s)
+- Log call in Salesforce notes
+
+Step 7
+- Assign CEA (3–8 outbounds) if no final outcome by 2nd outreach
+
+Footer note on /process:
+- “Version 0.1 — baseline flow. Next: make branch selection interactive and attach links/templates.”
+
+============================================================
+3) SPECIAL CASES ( /managing-special-cases )
+============================================================
+Alternative investments (quick guidance)
+- If you see annuities, private equity, hedge funds, or other alternative holdings, treat the case as a special workflow.
+- Goal: avoid promising timelines and route to correct internal process.
+
+What to check
+- Is the asset transferable or does it require liquidation?
+- Any surrender charges / lockups / notice periods?
+- Who is the product sponsor / platform?
+- Is there a required LOA / additional forms?
+
+What to say
+- Set expectations: “We’re confirming requirements and next steps.”
+- Avoid guarantees: don’t promise a timeline.
+- Document: note the holdings + what you routed to.
+
+Next steps
+1) Confirm holdings in Finder + New Holdings View.
+2) Collect required details (product type, sponsor, restrictions).
+3) Route to the correct internal team/process (TBD).
+4) Update Salesforce notes + action plan items.
+
+============================================================
+4) RESOURCES ( /resources )
+============================================================
+Quick links:
+1) Insurance QRG 3.pptx (reimbursements)
+https://bankofamerica-my.sharepoint.com.mcas.ms/:p:/g/personal/adrian_larios_ml_com/IQBgLKO4BIoaT5bX-pQN66pPARkAPLcqUhHaXxlnPTI4ot8?wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdhostclicktime=1772222296088&web=1&wdExp=TEAMS-TREATMENT
+
+2) Identity Verification
+https://bankofamerica-my.sharepoint.com/:b:/g/personal/mark_c_caubo_ml_com/IQCxgtS17xTxR6iWlaUnQpvMAUA_n-MybaShpTTftcFxHBc?e=YP7Hty
+
+3) Merrill Lynch Education Savings Account Distribution Form
+http://resourcecentral.bankofamerica.com/RetirementEducationPlanningDocuments/0873.pdf
+
+4) FINRA CE & MyLearning Tracking.xlsx
+https://bankofamerica.sharepoint.com.mcas.ms/:x:/r/sites/MG-PacificCoastCEAs-CO/_layouts/15/Doc.aspx?sourcedoc=%7B8BDDDCA5-A629-4CE8-A0E5-D1E53DFDFF74%7D&file=FINRA%20CE%20&%20MyLearning%20Tracking.xlsx=&action=default&mobileredirect=true
+
+5) Street Request.pdf (when order quantity < minimum)
+http://intranet.bankofamerica.com/GWMSContactCenter/Documents/99%20Markets/Street%20Request.pdf
+
+6) Low Balance Closeouts
+http://intranet.bankofamerica.com/GWMSContactCenter/Documents/Margin%20and%20Monetary%20Approvals/Customer%20Accounting/Low%20Balance%20Close%20outs%20and%20Charge%20Offs.pdf
+
+7) OMT Escalation Form (reference table page)
+/site: /resources/omt-escalation
+
+8) Nonworking Number
+- Salesforce: New Task → assign to Kaitlyn Stern
+- Title: LexusNexxus (use if phone number doesn't work).
+
+9) HSA Guidelines
+/site: /resources/hsa
+
+Full reference:
+- /resources/full
+
+============================================================
+5) OMT ESCALATION FORM ( /resources/omt-escalation )
+============================================================
+Table fields (right column is blank for OMT/FA completion):
+- Reason for Escalation: Potential Complaint, Suspicious Activity, Other Request
+- Lead CEA / Inherited from FA/Team
+- Market / Office Name
+- Client Name
+- Account #
+- Total AUM
+- Notes:
+  1) Phone Call Details
+  2) Product or Service involved
+  3) Context of Escalation/Complaint/Suspicious Activity
+  4) Client Callback Info
+  5) Your Contact info if OMT/FA has inquiries
+  * Attach applicable email/written correspondence
+- Outcome: [For OMT to Complete]
+
+============================================================
+6) HSA GUIDELINES ( /resources/hsa )
+============================================================
+Note
+- Merrill Lynch no longer offers HSAs.
+- Clients can open Bank of America (BofA) Health Benefit Solutions HSA.
+
+Annual limits
+- $4,400 single
+- $8,750 family
+- Age 55+: +$1,000
+- 55 as of 12/13 of current calendar year
+
+Monthly limits
+- Annual contribution limit divided into 12 monthly amounts.
+- For each month with an HDHP (as of first of month), you can contribute that monthly amount.
+
+Fees
+- $50 annual custodial fee
+- $50 closeout/transfer out fee
+
+Withdrawals/distributions
+- HSA/MSA Distribution Form
+
+Contributions into Merrill HSAs
+- Check or Journal Entry (JE)
+- FTS and Direct Deposits (DDS) no longer accepted
+
+Transfers into Merrill HSAs
+- Not allowed
+- Clients can transfer into a BofA HSA
+
+Transfers out of Merrill
+- Eligible via ATS Online (ACAT & Non-ACAT)
+- Must be fully liquidated to cash (no in-kind via ATS Online)
+- ACAT: gaining firm initiates per NYSE Rule 412
+- Non-ACAT: client establishes contra account; paperwork; contra firm mails to branch; submit via ATS Online
+
+Transfer Merrill HSA → BofA HSA
+Opening a BofA HSA account
+- Apply online or call 1.800.992.3200
+  - Option #1 Individual Accounts
+  - Option #2 Group Accounts
+  - 9am–6pm Mon–Fri EST
+Existing BofA HSA assistance / fee waiver
+- 1.866.791.0250 (8am–11pm EST)
+Online access
+- MyHealth BofA app → New User setup
+Desktop access
+- If employer provided an enrollment code: use “I have a code”
+- If not: “Get Started”
+
+============================================================
+7) TEMPLATES ( /templates )
+============================================================
+Status: Placeholder page
+- Intended: follow-up emails, realignment outreach, close-out confirmations.
+
+============================================================
+8) FAQ ( /faq )
+============================================================
+Status: Placeholder page
+- Intended: when to close-out vs maintain pool, what counts as “final outcome”, outbounds before assigning CEA.
