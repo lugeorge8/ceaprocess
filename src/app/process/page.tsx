@@ -38,8 +38,8 @@ function FlowCard({ title, bullets, tone = "neutral" }: FlowCardProps) {
 
 function DownArrow() {
   return (
-    <div className="my-4 flex w-full max-w-xl items-center justify-center">
-      <div className="h-10 w-px bg-slate-300" />
+    <div className="my-4 flex w-full max-w-xl items-center justify-start">
+      <div className="ml-8 h-10 w-px bg-slate-300" />
       <div className="-ml-[9px] mt-9 h-0 w-0 border-x-[9px] border-t-[12px] border-x-transparent border-t-slate-300" />
     </div>
   );
@@ -95,11 +95,11 @@ export default function Home() {
       />
 
       <main className="mx-auto w-full max-w-3xl px-5 py-12">
-        <div className="flex flex-col items-center">
-          <div className="flex w-full flex-col items-center gap-4 lg:max-w-none lg:flex-row lg:items-start lg:justify-center">
+        <div className="flex flex-col items-start">
+          <div className="flex w-full flex-col items-start gap-4 lg:max-w-none lg:flex-row lg:items-start lg:justify-start">
             <div className="w-full max-w-xl rounded-3xl border border-[#0aa6a6]/35 bg-[#e6f7f7] p-6 shadow-sm">
               <div className="flex items-start justify-between gap-4">
-                <div className="flex-1 text-center text-base font-semibold tracking-tight text-slate-900">
+                <div className="flex-1 text-left text-base font-semibold tracking-tight text-slate-900">
                   1. Save Your List
                 </div>
 
@@ -216,7 +216,7 @@ export default function Home() {
           {/* Revealed branch */}
           {path === "low-balance" ? (
             <div className="mt-2 w-full max-w-xl rounded-3xl border border-amber-300/70 bg-amber-50/60 p-3 shadow-sm">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-start">
                 <FlowCard
                   title="6. Low Balance Close-Out"
                   bullets={[
@@ -240,7 +240,7 @@ export default function Home() {
 
           {path === "maintain-pool" ? (
             <div className="mt-2 w-full max-w-xl rounded-3xl border border-amber-300/70 bg-amber-50/60 p-3 shadow-sm">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-start">
                 <FlowCard
                   title="6. Maintain Pool"
                   bullets={[
@@ -255,7 +255,7 @@ export default function Home() {
 
           {path === "ci-iap" ? (
             <div className="mt-2 w-full max-w-xl rounded-3xl border border-amber-300/70 bg-amber-50/60 p-3 shadow-sm">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-start">
                 <FlowCard
                   title="6. Consumer Investments / IAP"
                   bullets={[
@@ -267,7 +267,7 @@ export default function Home() {
             </div>
           ) : null}
 
-          <div className="mt-12 flex w-full max-w-xl flex-col items-center">
+          <div className="mt-12 flex w-full max-w-xl flex-col items-start">
             <DownArrow />
             <FlowCard
               title="6. Per outbound attempt"
