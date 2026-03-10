@@ -97,7 +97,7 @@ export default function Home() {
       <main className="mx-auto w-full max-w-3xl px-5 py-12">
         <div className="flex flex-col items-start">
           <div className="flex w-full flex-col items-start gap-4 lg:max-w-none lg:flex-row lg:items-start lg:justify-start">
-            <div className="w-full max-w-xl rounded-3xl border border-[#0aa6a6]/35 bg-[#e6f7f7] p-6 shadow-sm">
+            <div className="w-full max-w-3xl rounded-3xl border border-[#0aa6a6]/35 bg-[#e6f7f7] p-6 shadow-sm">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1 text-left text-base font-semibold tracking-tight text-slate-900">
                   1. Save Your List
@@ -116,7 +116,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="hidden lg:block lg:w-[420px]" />
+            {/* spacer removed */}
           </div>
           <DownArrow />
 
