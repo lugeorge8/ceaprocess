@@ -221,6 +221,7 @@ export default function Home() {
                   title="6. Low Balance Close-Out"
                   bullets={[
                     "Submit form to OMT",
+                    "Request OMT for automatic approval (<$15)",
                     "Final outcome update",
                     "Use OMT escalation form if needed (see link below)",
                   ]}
