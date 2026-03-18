@@ -16,14 +16,9 @@ function LinkList({ items }: { items: LinkItem[] }) {
           <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
             <div className="text-sm font-semibold text-slate-900">{it.label}</div>
             {it.href ? (
-              <a
-                href={it.href}
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm font-semibold text-[#0aa6a6] underline"
-              >
-                Open
-              </a>
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                LINK REMOVED
+              </div>
             ) : (
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                 TBD
@@ -60,31 +55,24 @@ export default function ResourcesPage() {
             items={[
               {
                 label: "Insurance QRG 3.pptx (reimbursements)",
-                href: "https://bankofamerica-my.sharepoint.com.mcas.ms/:p:/g/personal/adrian_larios_ml_com/IQBgLKO4BIoaT5bX-pQN66pPARkAPLcqUhHaXxlnPTI4ot8?wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdhostclicktime=1772222296088&web=1&wdExp=TEAMS-TREATMENT",
               },
               {
                 label: "Identity Verification",
-                href: "https://bankofamerica-my.sharepoint.com/:b:/g/personal/mark_c_caubo_ml_com/IQCxgtS17xTxR6iWlaUnQpvMAUA_n-MybaShpTTftcFxHBc?e=YP7Hty",
               },
               {
                 label: "Merrill Lynch Education Savings Account Distribution Form",
-                href: "http://resourcecentral.bankofamerica.com/RetirementEducationPlanningDocuments/0873.pdf",
               },
               {
                 label: "FINRA CE & MyLearning Tracking.xlsx",
-                href: "https://bankofamerica.sharepoint.com.mcas.ms/:x:/r/sites/MG-PacificCoastCEAs-CO/_layouts/15/Doc.aspx?sourcedoc=%7B8BDDDCA5-A629-4CE8-A0E5-D1E53DFDFF74%7D&file=FINRA%20CE%20&%20MyLearning%20Tracking.xlsx=&action=default&mobileredirect=true",
               },
               {
                 label: "Street Request.pdf (when order quantity < minimum)",
-                href: "http://intranet.bankofamerica.com/GWMSContactCenter/Documents/99%20Markets/Street%20Request.pdf",
               },
               {
                 label: "Low Balance Closeouts",
-                href: "http://intranet.bankofamerica.com/GWMSContactCenter/Documents/Margin%20and%20Monetary%20Approvals/Customer%20Accounting/Low%20Balance%20Close%20outs%20and%20Charge%20Offs.pdf",
               },
               {
                 label: "OMT Escalation Form",
-                href: "/resources/omt-escalation",
                 note: "Reference table page.",
               },
               {
@@ -94,7 +82,6 @@ export default function ResourcesPage() {
               },
               {
                 label: "HSA Guidelines",
-                href: "/resources/hsa",
                 note: "Limits, fees, transfers, and BofA HSA setup instructions.",
               },
             ]}
@@ -109,12 +96,9 @@ export default function ResourcesPage() {
               on its own page.
             </p>
             <div className="mt-4">
-              <Link
-                href="/resources/full"
-                className="inline-flex items-center justify-center rounded-full bg-[#0aa6a6] px-5 py-2 text-sm font-semibold text-white hover:opacity-90"
-              >
-                Open full reference
-              </Link>
+              <div className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-2 text-sm font-semibold text-slate-600">
+                Link removed
+              </div>
             </div>
           </div>
         </div>
